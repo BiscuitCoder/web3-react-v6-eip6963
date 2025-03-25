@@ -3,7 +3,7 @@ import React from 'react'
 import { Web3ReactProvider, useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import { Web3Provider } from '@ethersproject/providers'
 import { InjectedConnector } from '@web3-react/injected-connector'
-import { EIP6963Connector } from './custom-connector'
+import { EIP6963Connector } from './eip6963-connector'
 import EipFeat  from './components/EIPFeat';
 
 export const injected = new InjectedConnector({});//readonly supportedChainIds?: number[];

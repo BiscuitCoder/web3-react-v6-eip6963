@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Web3ReactProvider, useWeb3React, UnsupportedChainIdError } from '@web3-react/core'
 import { Web3Provider } from '@ethersproject/providers'
-import { EIP6963Connector,getProviders } from '../custom-connector'
+import { EIP6963Connector,getProviders } from '../eip6963-connector'
 
 export default function() {
   const { connector, library, chainId, account, activate, deactivate, active, error } = useWeb3React<Web3Provider>();
