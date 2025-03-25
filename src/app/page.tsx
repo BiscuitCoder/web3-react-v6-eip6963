@@ -6,16 +6,13 @@ import { InjectedConnector } from '@web3-react/injected-connector'
 import { EIP6963Connector } from './eip6963-connector'
 import EipFeat  from './components/EIPFeat';
 
-export const injected = new InjectedConnector({});//readonly supportedChainIds?: number[];
-export const eip6963Connector = new EIP6963Connector({name:''});
+const injected = new InjectedConnector({});//readonly supportedChainIds?: number[];
 enum ConnectorNames {
-  Injected = 'Injected',
-  EIP6963Connector = 'EIP6963Connector'
+  Injected = 'Injected'
 }
 
 const connectorsByName: { [connectorName in ConnectorNames]: any } = {
-  [ConnectorNames.Injected]: injected,
-  [ConnectorNames.EIP6963Connector]: eip6963Connector
+  [ConnectorNames.Injected]: injected
 }
 
 
