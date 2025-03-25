@@ -119,7 +119,7 @@ export class EIP6963Connector extends AbstractConnector {
     // if unsuccessful, try enable
     if (!account) {
       // if enable is successful but doesn't return accounts, fall back to getAccount (not happy i have to do this...)
-      account = await this.provider.enable().then(sendReturn => sendReturn && parseSendReturn(sendReturn)[0])
+      account = await this.provider.enable().then((sendReturn: any) => sendReturn && parseSendReturn(sendReturn)[0])
     }
 
     return { provider: this.provider, ...(account ? { account } : {}) }
@@ -186,7 +186,7 @@ export class EIP6963Connector extends AbstractConnector {
 
     if (!account) {
       try {
-        account = await this.provider.enable().then(sendReturn => parseSendReturn(sendReturn)[0])
+        account = await this.provider.enable().then((sendReturn: any) => parseSendReturn(sendReturn)[0])
       } catch {
         warning(false, 'enable was unsuccessful, falling back to eth_accounts v2')
       }
