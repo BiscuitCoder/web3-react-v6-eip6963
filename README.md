@@ -7,7 +7,7 @@ web-react 在v6版本中对于浏览器注入型钱包只实现了[injected-conn
 #### 解决方案
 该实例通过[abstract-connector](https://github.com/Uniswap/web3-react/tree/v6/packages/abstract-connector)实现了一个`EIP6963Connector`,你只需要按照实例所示引入`src/app/eip6963-connector`内容，即可以在不破坏原有代码的基础上完成集成。
 
-#### 相关链接：
+#### 相关链接
 - https://github.com/Uniswap/web3-react/tree/v6
 - https://eips.ethereum.org/EIPS/eip-6963
 
@@ -19,6 +19,6 @@ In version v6, web3-react only implemented the [injected-connector](https://gith
 In fact, there are still some actively maintained projects using the v6 library in the production environment. Due to historical constraints, the cost of refactoring the wallet module would be relatively high.
 #### Solution
 This example implements an EIP6963Connector through the [abstract-connector](https://github.com/Uniswap/web3-react/tree/v6/packages/abstract-connector). You just need to import the content from `src/app/eip6963-connector` as shown in the example, and you can complete the integration without disrupting the existing code.
-#### Related links:
+#### Related links
 - https://github.com/Uniswap/web3-react/tree/v6
 - https://eips.ethereum.org/EIPS/eip-6963
